@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import Courses from './containers/Courses/Courses';
 import Users from './containers/Users/Users';
 import {Route, NavLink, Switch} from 'react-router-dom';
-import Course from './containers/Course/Course';
+//import Course from './containers/Course/Course';
+import NoMatch from './components/NoMatch/NoMatch';
 
 
 class App extends Component {
@@ -34,6 +35,7 @@ class App extends Component {
         <Route path="/users" component={Users} />
         {/*<Route path="/courses/:courseId" component={Course} /> */}
         <Route path="/courses" component={Courses}/>
+        <Route component={NoMatch} />
 
       </Switch>
         
