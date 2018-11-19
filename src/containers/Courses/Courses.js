@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,Route } from 'react-router-dom';
 
 import './Courses.css';
+import Course from '../Course/Course';
 
 class Courses extends Component {
     state = {
@@ -13,6 +14,7 @@ class Courses extends Component {
     }
 
     render () {
+        //console.log(this.props);
         return (
             <div>
                 <h1>Amazing Udemy Courses</h1>
@@ -29,6 +31,9 @@ class Courses extends Component {
                         } )
                     }
                 </section>
+
+                <Route path={this.props.match.url + '/:courseId'} component={Course} />
+
             </div>
         );
     }
