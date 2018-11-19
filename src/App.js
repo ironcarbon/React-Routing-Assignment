@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 import Courses from './containers/Courses/Courses';
 import Users from './containers/Users/Users';
-import {Route, NavLink} from 'react-router-dom';
+import {Route, NavLink, Switch} from 'react-router-dom';
+import Course from './containers/Course/Course';
 
 
 class App extends Component {
@@ -28,9 +29,14 @@ class App extends Component {
             </ul>
           </nav>
         </header>
-
-        <Route path="/courses" component={Courses}/>
+      <Switch>
+         
         <Route path="/users" component={Users} />
+        <Route path="/courses/:courseId/:courseTitle" component={Course} />
+        <Route path="/courses" component={Courses}/>
+
+      </Switch>
+        
       </div>
 
       
