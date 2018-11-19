@@ -32,7 +32,7 @@ class App extends Component {
       <Switch>
          
         <Route path="/users" component={Users} />
-        <Route path="/courses/:courseId/:courseTitle" component={Course} />
+        <Route path="/courses/:courseId" component={Course} />
         <Route path="/courses" component={Courses}/>
 
       </Switch>
